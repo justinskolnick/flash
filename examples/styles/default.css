@@ -1,0 +1,194 @@
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  color: black;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* example setup */
+
+/* layout */
+
+.examples {
+  position: relative;
+  margin: 50px auto;
+  width: 800px;
+}
+
+nav {
+  position: absolute;
+  top: 36px;
+  left: 0;
+  width: 150px;
+  height: 16em;
+}
+
+.example {
+  margin: 0 200px;
+  width: 400px;
+}
+
+article + .flash,
+article + form,
+form + article,
+.flash + form,
+footer {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid black;
+}
+
+footer {
+  margin-left: 200px;
+}
+
+/* typography */
+
+h1, h2, p, ul, li, dl, dd,
+fieldset, label, input {
+  margin: 0;
+}
+
+h1, h2, p, ul, li, fieldset {
+  padding: 0;
+}
+
+/* margins by relationship */
+
+header + article,
+h2 + p,
+h2 + dl,
+p + p,
+p + ul,
+ul + ul,
+p + h3,
+article h3 + pre {
+  margin-top: 18px;
+}
+
+nav dd + dt {
+  margin-top: 9px;
+}
+
+h1, h2, h3, dt {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+h2 {
+  font-size: 15px;
+}
+
+h3, 
+p,
+ul {
+  font-size: 14px;
+}
+
+nav dl,
+footer > p {
+  font-size: 12px;
+}
+
+h1, 
+h2, 
+p, 
+nav dl {
+  line-height: 18px;
+}
+
+article pre {
+  width: 600px;
+  word-wrap: normal;
+  overflow: auto;
+}
+
+/* forms */
+
+fieldset {
+  border: 0;
+}
+
+fieldset + button {
+  margin-top: 18px;
+}
+
+.field {
+  margin-bottom: 3px;
+}
+
+label, input {
+  display: block;
+  margin: 0;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+label {
+  float: left;
+  padding: 3px 0;
+}
+
+label.required:after {
+  content: ' *';
+  color: red;
+}
+
+input {
+  margin-left: 200px;
+  width: 200px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* flash styling */
+
+.flash > p,
+.flash > ul {
+  padding: 3px 6px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.flash > ul li {
+  margin-left: 24px;
+}
+
+.flash > p + p,
+.flash > ul + ul,
+.flash > ul li + li {
+  margin-top: 3px;
+}
+
+.flash-info {
+  background-color: #ccf;
+  color: #006;
+}
+
+.flash-warning {
+  background-color: #ffc;
+  color: #963;
+}
+
+.flash-success {
+  background-color: #cfc;
+  color: #060;
+}
+
+.flash-error {
+  background-color: #fcc;
+  color: #600;
+}
