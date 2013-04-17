@@ -59,7 +59,7 @@ if ( $flash->hasMessages() ) {
 ?> 
 ```
 
-Refer to the examples for additional usage.
+Refer to the [examples](https://github.com/justinskolnick/flash/tree/master/examples) for additional usage.
 
 ## TODO
 
