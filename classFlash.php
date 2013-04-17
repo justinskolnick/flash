@@ -1,7 +1,7 @@
 <?php
 
 #   Flash
-#   Session-Based Messaging v1.3
+#   Simple flash messaging for developers who have to work in PHP.
 # 
 # 
 #   (c) 2011 Mike Everhart | MikeEverhart.net
