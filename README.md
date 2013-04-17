@@ -14,7 +14,7 @@ The code in this repository represents a significant departure from Everhart's w
 
 Drop `classFlash.php` into the directory of your choice. Start a new session, require the file, and create a new instance of the class.
 
-```
+``` php
 if ( !session_id() ) @session_start();
 
 require_once( 'classFlash.php' );
@@ -26,20 +26,20 @@ $flash = new Flash();
 
 Add messages by passing a message type and a message to `add()`. By default, four message types are supported: `'info'`, `'warning'`, `'success'`, and `'error'`. 
 
-```
+``` php
 $flash->add( "error", "This field can't be empty" );
 $flash->add( "warning", "It's fine but don't do it again" );
 ```
 
 Other types may be added by means of the first argument.
 
-```
+``` php
 $flash->add( "reminder", "Take out the trash" );
 ```
 
 Print messages by looping through the class's `$messages` array. Note that `hasMessages()` (or `hasErrors()`) must be called at least once per instance.
 
-```
+``` php
 <?php
 if ( $flash->hasMessages() ) {
 ?> 
