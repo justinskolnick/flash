@@ -55,7 +55,11 @@ class Flash {
   # __construct()
   
   public function __construct() {
-  
+    
+    # start the session
+    
+    if ( !session_id() ) @session_start();
+    
     # create the $_SESSION array if it doesnt already exist
     
     if ( !array_key_exists( 'flash_messages', $_SESSION ) )

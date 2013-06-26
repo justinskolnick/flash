@@ -1,6 +1,6 @@
 # Flash
 
-Simple flash messaging for developers who have to work in PHP.
+Simple flash messaging for PHP applications.
 
 Flash is a PHP class built around the `$_SESSION` superglobal array. Messages are added to the array by means of a function; messages are printed by looping through an array.
 
@@ -12,11 +12,9 @@ The code in this repository represents a significant departure from Everhart's w
 
 ## Installation
 
-Drop `classFlash.php` into the directory of your choice. Start a new session, require the file, and create a new instance of the class.
+Drop `classFlash.php` into the directory of your choice. Require the file and instantiate the class.
 
 ``` php
-if ( !session_id() ) @session_start();
-
 require_once( 'classFlash.php' );
 
 $flash = new Flash();

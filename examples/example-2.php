@@ -3,9 +3,6 @@
 ########################################################
 # SETUP
 
-# start the session
-if ( !session_id() ) @session_start();
-
 # require classFlash.php
 require_once( realpath( './../classFlash.php' ) );
 
