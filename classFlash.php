@@ -78,12 +78,12 @@ class Flash {
     
     # don't proceed unless the $_SESSION exists
     
-    if ( empty( $_SESSION['flash_messages'] ) ) return false;
+    if ( !isset( $_SESSION['flash_messages'] ) ) return false;
     
     # no blank $type, no empty $message
     
-    if ( empty( $type ) ) return false;
-    if ( empty( $message[0] ) ) return false;
+    if ( !isset( $type ) ) return false;
+    if ( !isset( $message[0] ) ) return false;
     
     # trim any leading or trailing whitespace
     
