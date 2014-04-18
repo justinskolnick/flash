@@ -62,8 +62,9 @@ class Flash {
     
     # create the $_SESSION array if it doesnt already exist
     
-    if ( !array_key_exists( 'flash_messages', $_SESSION ) )
+    if ( !array_key_exists( 'flash_messages', $_SESSION ) ) {
       $_SESSION['flash_messages'] = array();
+    }
       
   }
   
@@ -90,19 +91,22 @@ class Flash {
 
     # if the session array for this type doesn't exist, create it
     
-    if ( !array_key_exists( $type, $_SESSION['flash_messages'] ) )
+    if ( !array_key_exists( $type, $_SESSION['flash_messages'] ) ) {
       $_SESSION['flash_messages'][$type] = array();
+    }
     
     # or, if it's not a default message type, add the type to the array
     
-    if ( !in_array( $type, $this->defaultMessageTypes ) )
+    if ( !in_array( $type, $this->defaultMessageTypes ) ) {
       $_SESSION['flash_messages'][$type] = array();
+    }
     
     # if the message doesn't already exist in the array, add it
     # no duplicates, please
     
-    if ( !in_array( $message, $_SESSION['flash_messages'][$type] ) )
+    if ( !in_array( $message, $_SESSION['flash_messages'][$type] ) ) {
       $_SESSION['flash_messages'][$type][] = $message;
+    }
     
     return true;
     
@@ -165,15 +169,13 @@ class Flash {
     
     if ( is_null( $type ) ) {
     
-      if ( !empty( $this->messages ) )
-        return true;
+      if ( !empty( $this->messages ) ) return true;
       
     # a non-null $type indicates messages for that $type
     
     } else {
     
-      if ( !empty( $this->messages[$type] ) )
-        return true;
+      if ( !empty( $this->messages[$type] ) ) return true;
         
     }
     
