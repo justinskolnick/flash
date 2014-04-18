@@ -183,16 +183,6 @@ class Flash {
   
   
   ########################################################
-  # __toString()
-  #
-  # return the result from $this->hasMessages()
-  
-  public function __toString() {
-    return $this->hasMessages();
-  }
-  
-  
-  ########################################################
   # clear()
   #
   # deletes all the queued messages in the session data
