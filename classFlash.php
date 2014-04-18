@@ -5,7 +5,7 @@
 # 
 # 
 #   (c) 2011 Mike Everhart | MikeEverhart.net
-#   (c) 2013 Justin Skolnick | justinskolnick.com
+#   (c) 2013-2014 Justin Skolnick | justinskolnick.com
 #
 #
 #   LICENSE
@@ -21,15 +21,6 @@
 #   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
-#
-#
-#   CHANGELOG
-# 
-#   2011-05-15 - v1.0   - Initial Version
-#   2012-01-29 - v1.1   - Minor adaptations
-#   2012-04-10 - v1.2   - Major revisions
-#   2012-04-13 - v1.2.1 - Reworked documentation
-#   2012-04-17 - v1.3   - Output moved to instance variable
 
 class Flash {
   
@@ -42,14 +33,12 @@ class Flash {
   
   public $messages = array();
 
-  
   ########################################################
   # __set
   
   public function __set( $name, $value ) {
     $this->$name = $value;
   }
-  
   
   ########################################################
   # __construct()
@@ -67,7 +56,6 @@ class Flash {
     }
       
   }
-  
   
   ########################################################
   # add()
@@ -112,7 +100,6 @@ class Flash {
     
   }
   
-  
   ########################################################
   # moveMessages()
   #
@@ -143,7 +130,6 @@ class Flash {
   
   }
   
-  
   ########################################################
   # hasErrors()
   #
@@ -152,7 +138,6 @@ class Flash {
   public function hasErrors() {
     return $this->hasMessages( 'error' );
   }
-  
   
   ########################################################
   # hasMessages()
@@ -183,7 +168,6 @@ class Flash {
     
   }
   
-  
   ########################################################
   # clear()
   #
@@ -199,7 +183,6 @@ class Flash {
     
     return true;
   }
-  
   
 }
 
