@@ -165,16 +165,16 @@ class Flash {
     
     if ( !$this->moveMessages() ) return false;
   
-    # a null $type indicates all messages
-    
     if ( is_null( $type ) ) {
     
+      # a null $type indicates all messages
+      
       if ( !empty( $this->messages ) ) return true;
       
-    # a non-null $type indicates messages for that $type
-    
     } else {
     
+      # a non-null $type indicates messages for that $type
+      
       if ( !empty( $this->messages[$type] ) ) return true;
         
     }
