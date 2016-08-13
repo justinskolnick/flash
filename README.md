@@ -4,20 +4,14 @@ Simple flash messaging for PHP applications.
 
 Flash is a PHP class built around the `$_SESSION` superglobal array. Messages are added to the array by means of a function; messages are printed by looping through an array.
 
-## Credits
-
-The `$_SESSION` array is easy to manipulate and easy to make a mess of. This class would not exist without the good order of Mike Everhart's solid [PHP Session-Based Flash Messages](https://github.com/plasticbrain/PHP-Flash-Messages). 
-
-The code in this repository represents a significant departure from Everhart's work. The original class was modified within the codebase of a client application, in isolation from his project, and towards a different end than he appears to be pursuing. I encourage developers to compare the projects and use the class most appropriate to their needs.
-
 ## Installation
 
-Drop `classFlash.php` into the directory of your choice. Require the file and instantiate the class.
+Drop `Flash.php` into the directory of your choice. Require the file and instantiate the class.
 
 ``` php
-require_once( 'classFlash.php' );
+require_once 'Flash.php';
 
-$flash = new Flash();
+$flash = new \justinskolnick\Flash\Flash();
 ```
 
 ## Usage
@@ -63,11 +57,17 @@ Refer to the [examples](https://github.com/justinskolnick/flash/tree/master/exam
 
 Maybe a few more examples.
 
+## Credits
+
+The `$_SESSION` array is easy to manipulate and easy to make a mess of. This class would not exist without the good order of Mike Everhart's solid [PHP Session-Based Flash Messages](https://github.com/plasticbrain/PHP-Flash-Messages). 
+
+The code in this repository represents a significant departure from Everhart's work. The original class was modified within the codebase of a client application, in isolation from his project, and towards a different end than he appears to be pursuing. I encourage developers to compare the projects and use the class most appropriate to their needs.
+
 ## LICENSE
 
 Copyright © 2011 Mike Everhart
 
-Copyright © 2013-2014 Justin Skolnick
+Copyright © 2013-2016 Justin Skolnick
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 

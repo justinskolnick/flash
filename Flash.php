@@ -5,7 +5,7 @@
 # 
 # 
 #   (c) 2011 Mike Everhart | MikeEverhart.net
-#   (c) 2013-2014 Justin Skolnick | justinskolnick.com
+#   (c) 2013-2016 Justin Skolnick | justinskolnick.com
 #
 #
 #   LICENSE
@@ -22,16 +22,18 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 
+namespace justinskolnick\Flash;
+
 class Flash {
   
   # start with these types of messages
   # we can always add others
   
-  public $defaultMessageTypes = array( 'info', 'warning', 'success', 'error' );
+  public $defaultMessageTypes = [ 'info', 'warning', 'success', 'error' ];
   
   # receives any flash messages assigned $_SESSION
   
-  public $messages = array();
+  public $messages = [];
 
   ########################################################
   # __set
@@ -52,7 +54,7 @@ class Flash {
     # create the $_SESSION array if it doesnt already exist
     
     if ( !array_key_exists( 'flash_messages', $_SESSION ) ) {
-      $_SESSION['flash_messages'] = array();
+      $_SESSION['flash_messages'] = [];
     }
       
   }
@@ -80,13 +82,13 @@ class Flash {
     # if the session array for this type doesn't exist, create it
     
     if ( !array_key_exists( $type, $_SESSION['flash_messages'] ) ) {
-      $_SESSION['flash_messages'][$type] = array();
+      $_SESSION['flash_messages'][$type] = [];
     }
     
     # or, if it's not a default message type, add the type to the array
     
     if ( !in_array( $type, $this->defaultMessageTypes ) ) {
-      $_SESSION['flash_messages'][$type] = array();
+      $_SESSION['flash_messages'][$type] = [];
     }
     
     # if the message doesn't already exist in the array, add it

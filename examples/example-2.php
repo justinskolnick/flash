@@ -3,17 +3,17 @@
 ########################################################
 # SETUP
 
-# require classFlash.php
-require_once( realpath( './../classFlash.php' ) );
+# require Flash.php
+require_once realpath( './../Flash.php' );
 
-# create Flash object
-$flash = new Flash();
+# create the Flash object
+$flash = new \justinskolnick\Flash\Flash();
 
 ########################################################
 # CUSTOM THINGS
 
 # set required fields
-$required_fields = array( 'field1', 'field2', 'field3' );
+$required_fields = [ 'field1', 'field2', 'field3' ];
 
 # set default field values
 $field1_value = "This field is complete";
